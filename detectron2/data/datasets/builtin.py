@@ -245,6 +245,7 @@ def register_all_ade20k(root):
             ignore_label=255,
         )
 
+export DETECTRON2_DATASETS="../input/dataset"
 
 # True for open source;
 # Internally at fb, we register them elsewhere
