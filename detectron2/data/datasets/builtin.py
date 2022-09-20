@@ -245,13 +245,13 @@ def register_all_ade20k(root):
             ignore_label=255,
         )
 
-export DETECTRON2_DATASETS="../input/dataset"
+#export DETECTRON2_DATASETS=../input/dataset
 
 # True for open source;
 # Internally at fb, we register them elsewhere
 if __name__.endswith(".builtin"):
     # Assume pre-defined datasets live in `./datasets`.
-    _root = os.path.expanduser(os.getenv("DETECTRON2_DATASETS", "../input/dataset"))
+    _root = "../input/dataset"
     register_all_coco(_root)
     register_all_lvis(_root)
     register_all_cityscapes(_root)
